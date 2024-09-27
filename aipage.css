@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+
+@media (min-width: 1000px){
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    --scrollbar-thumb-bg:linear-gradient(rgba(236, 253, 0, 0.096), rgba(229, 255, 0, 0.836));
+  --scrollbar-thumb-bg-hover:linear-gradient(rgba(100, 73, 255, 0.055),rgb(66, 24, 255));
+  background:#110d16;
+  scroll-behavior: smooth;
+  }
+  .responsive-declaration{
+    display:none;
+  }
+  .body1{
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    z-index:1;
+   padding:12px;
+   background-size: cover;
+  }
+@property --angle{
+    syntax:"<angle>";
+    initial-value: 0deg;
+    inherits:false;
+}
+@keyframes spin{
+    0%{--angle:0deg;}
+    100%{--angle:360deg;}
+}
+.hi::after, .hi::before{
+    transform:translate(-50%, -50%);
+    content:'';
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    position:absolute;
+    background:conic-gradient(from var(--angle),#ff4545,#006aff,#00ff99, #ff0095, #ff4545);
+    height:100%;
+    width:100.2%;
+    z-index:-1;
+    top:50%;
+    left:50%;
+    padding:4px;
+    border-radius:16px;
+  }
+  .hi::before{
+    opacity:0.8;
+    filter:blur(10px)
+  }
+  .hi{
+    position:relative;
+    height:8vh;
+    background: rgb(20, 14, 37);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.48);
+}
+.hi-container{
+    position:relative;
+}
+.compare{
+    position:relative;
+    z-index:100;
+}
+.nav-links{
+ height:5vh;
+ display:flex;
+ gap:20px;
+ color:rgb(221, 221, 221);
+ justify-content: center;
+ list-style:none;
+ margin-top:-40px;
+ z-index:1000000000000000;
+ position:relative;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #ebebeb;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.intro{
+    margin-left:20px;
+    position:relative;
+}
+.title{
+    position:relative;
+    font-size: 75px;
+    font-family: "Madimi One", sans-serif;
+    color:rgb(255, 255, 255);
+    text-shadow: -5px -5px 15px rgba(0, 0, 0, 0.8); /* Dark shadow */
+}
+.title span{
+    font-size: 75px;
+    font-family: "Madimi One", sans-serif;
+    color:rgb(202, 0, 0);
+    text-shadow: -5px -5px 15px rgba(0, 0, 0, 0.8); /* Dark shadow */
+}
+.title-content{
+    font-size:15px;
+    color:rgb(230, 230, 230);
+    width:70vh;
+    font-family: "Madimi One", serif;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+}
+
+.heading{
+    padding-top:20px;
+    margin-bottom:10px;
+    overflow:hidden;
+    font-family:"Pixelify Sans", system-ui;
+  font-weight: 1000;
+  font-size: 40px;
+  justify-content: center;   
+  display:flex;
+  color:rgb(241, 241, 241);
+  text-align: center;
+}
+@keyframes text-reveal{
+  0%{color:rgb(206, 206, 206);}
+  50%{
+    color:rgb(240, 240, 240);}
+  100%{color:rgb(207, 207, 207)}
+  }
+
+.idekwhatimdoingrn{
+  background:linear-gradient(#000000,rgb(22, 22, 22)) ;
+}
+.lol{
+  transform:scaleX(0.99) scaleY(0.98);
+}
+.what_is_ai{
+    background-image:url('NewPlanetReal.webp');
+    background-attachment: fixed;
+    position:relative;
+    border-radius: 10px;
+}
+.what_is_ai::after{
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute; /* Absolute positioning to cover the container */
+  top: -10px;
+  width:100.5%;
+  left:-10px;
+  height:101%;
+  padding:5px;
+  background:conic-gradient(from var(--angle),transparent,transparent,transparent,transparent, rgba(0, 0, 194, 0.733));
+  z-index:-1; /* Ensure it's behind the container content */
+  animation-name: spin;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+.content{
+    margin-left:20px;
+    margin-top:20px;
+    margin-right:100px;
+    font-family:"Madimi One", serif;
+    font-weight:1;
+    letter-spacing: 0px;
+    color:rgb(19, 19, 19);
+}
+
+.container1{
+    display:flex;
+}
+.button{
+    background:linear-gradient(to bottom,#8bbafd,rgb(244, 241, 255));
+    height:300px;
+    word-break: break-all;
+    width:15px;
+    margin-left:20px;
+    font-family: "Madimi One", serif;
+    border-width:0px;
+    font-size:30px;
+    line-height: 1; 
+}
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background:transparent;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #2b2c2e;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  height: 350px;
+  margin-top:20px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: 1.6;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 5px;
+  will-change: transform,opacity;
+  z-index: 0;
+  word-break:break-all;
+  left:-50px;
+  margin-right:20px;
+}
+
+.button-17:hover {
+  background: #1a1a1a;
+  color: #444444;
+}
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  transform:translateY(-5px);
+}
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+.button1 {
+  position: absolute; /* Fix the button in place */
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  overflow: hidden;
+  transition:transform 0.3s ease-in-out;
+}
+
+.button1:hover {
+  transform: translateX(-50%) scale(1.2); /* Keep it centered and scale */
+  transition:transform 0.3s ease-in-out;
+}
+.whyai{
+  position:relative;
+  width:100%;
+  height:100vh;
+}
+.whyai_heading{
+  position:relative;
+  padding-top:15px;
+  text-align: center;
+  font-family:"Oxygen", sans-serif;
+  font-weight:bolder;
+  color:rgb(255, 255, 255);
+  font-size:60px;
+  margin-left:40px;
+  margin-bottom:25px;
+}
+.whyai_heading::after{
+ position:absolute;
+  transform:translate(-50%, -50%);
+    content:'Why do we need AI';
+    height:100%;
+    width:100%;
+    z-index:-1;
+    top:50%;
+    left:50%;
+    font-size: 62px;
+    border-radius:16px;
+    left:640px;
+    top:60px;
+    filter:blur(10px);
+    opacity:0.4;
+}
+.whyai_content{
+  margin-top:20px;
+  color:rgb(236, 236, 236);
+  text-align:center;
+  font-family:"Montserrat", serif;
+  margin-right:20vh;
+  margin-left:20vh;
+  font-size:16px;
+  font-weight:400;
+  word-spacing: 0.1px;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+}
+.IW{
+  margin-top:-20px;
+  justify-content: center;
+  text-align: center;
+  transform:scale(0.8);
+  
+}
+#IW{
+  border-width: 2px;
+  border-color:white;
+  border-style: solid;
+}
+.alt-text{
+  font-family: 'Montserrat', serif;
+  margin-top:15px;
+  color:rgb(170, 170, 170);
+}
+#background-video{
+  filter: blur(4px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+object-fit:cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transform:translate(-50%, -50%);
+  background-size: cover;
+}
+
+.ChatGpt_Heading{
+  margin-top:3vh;
+  margin-left:22%;
+  color:white;
+  font-size:40px;
+  font-family: 'Madimi One';
+  letter-spacing: 0.4px;
+  
+}
+.ChatGpt_Content{
+  text-align: center;
+  margin-top:2vh;
+  margin-left:2%;
+  color:white;
+  font-size:15.5px;
+  letter-spacing: 0.5px;
+  word-spacing:0.5px;
+  line-height: 22px;
+  font-family: 'Dosis';
+  width:50vw;
+  margin-right:3vw;
+}
+.Gemini_Container{
+  display:none;
+}
+.Perplexity_Container{
+  display:none;
+}
+.flex{
+  display:flex;
+}
+.come_to_front{
+  animation:navbar_visible ease-in-out 0.6s;
+  display:block;
+}
+.llm_navbar_ul{
+  text-align: center;
+  line-height: 40px;
+  list-style:none;
+  color:white; 
+  font-family: 'MontSerrat';
+  margin-left:5.5vw;
+}
+.llm_navbar_ul a{
+  text-decoration: none;
+  color:rgb(156, 156, 156);
+}
+.active{
+  display:inline-block;
+  animation:scale 0.5s;
+  animation-fill-mode: forwards;
+  text-decoration: none;
+}
+@keyframes scale{
+  0%{color:rgb(156, 156, 156);transform:scale(1)}
+  100%{transform:scale(1.2);color:white;}
+}
+.navbar_visible{
+  animation:navbar_visible 1.5s;
+}
+@keyframes navbar_visible{
+  0%{opacity:0.5; display:block;}
+  100%{display:block; opacity:0.9;}
+}
+.hidden{
+  display:none;
+}
+.socialIcons{
+  display:flex;
+  justify-content: center;
+}
+
+.socialIcons a i{
+  font-size:32px;
+  color:black;
+}
+
+.socialIcons a{
+background:linear-gradient(white,rgb(255, 255, 255));
+padding:7px;
+margin-right:20px;
+border-radius:50px;
+opacity:0.8}
+.socialIcons a:hover{
+  opacity:1;
+  transform:scale(1.1)
+}
+.spoiler-alert{
+  display:inline;
+  color:transparent;
+  cursor:pointer;
+  transition:color 0.4s;
+}
+.spoiler-alert:hover{
+  color:rgb(240, 240, 240);
+}
+
+  .footer_container{
+    padding-top:20px;
+    padding-bottom:5px;
+    background:rgb(8, 8, 8);
+  }
+  .ChatGpt_Content a{
+    text-decoration: none;
+    color:white;
+  }
+  .ChatGpt_Content a:hover{
+   color:rgb(230, 230, 230)
+  }
+  #responsive_container{
+    display:none;
+  }
+  #hmm{
+    position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 10;
+color:rgb(112, 112, 112);
+}
+#preloader {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #333; /* Dark background to give a Minecraft-like feel */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9;
+}
+
+/* Cube Styles */
+.cube {
+position: relative;
+width: 50px;
+height: 50px;
+transform-style: preserve-3d;
+animation: rotateY 3s infinite linear; /* 3D rotation animation */
+}
+#preloaderr{
+font-size:100px;
+position:relative;
+}
+
+/* Faces of the Cube */
+.face {
+position: absolute;
+width: 50px;
+height: 50px;
+background: url('minecraft-bg.jfif'); /* Minecraft cube texture */
+background-size: cover;
+border: 1px solid #000; /* Optional border for better visibility */
+}
+
+/* Positioning the Cube Faces */
+.front { transform: rotateY(0deg) translateZ(25px); }
+.back { transform: rotateY(180deg) translateZ(25px); }
+.left { transform: rotateY(-90deg) translateZ(25px); }
+.right { transform: rotateY(90deg) translateZ(25px); }
+.top { transform: rotateX(90deg) translateZ(25px); }
+.bottom { transform: rotateX(-90deg) translateZ(25px); }
+
+/* 3D Cube Rotation Animation */
+@keyframes rotateY{
+0% { transform: rotateY(0deg); }
+100% { transform: rotateY(360deg); }
+}
+
+/* Main Content Styles */
+#content {
+text-align: center;
+margin-top: 50px;
+}
+
+}
+
+
+
+
+
+@media (max-width:460px){
+  #responsive_container{
+    display:none;
+  }
+  .responsive-declaration{
+    color:orange;
+    font-family:'MontSerrat';
+    font-size:50px;
+    text-align: center;
+    width:75vw;
+    margin-top:27vh;
+  }
+  
+  
+  }
